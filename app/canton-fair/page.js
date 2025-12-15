@@ -20,8 +20,14 @@ export default function CantonFairPage() {
                         Seamless logistics, premium accommodation, and exclusive business itineraries for the world's largest trade fair.
                     </p>
                     <div className={styles.buttonContainer}>
-                        <a href="https://wa.me/1234567890" className={styles.ctaButton}>
-                            Plan My Trip
+                        <a
+                            href="https://wa.me/5555558800"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className={styles.ctaButton}
+                        >
+                            <MessageCircle size={20} />
+                            Inquire for Canton Fair
                         </a>
                     </div>
                 </div>

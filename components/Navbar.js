@@ -26,7 +26,7 @@ export default function Navbar() {
                 {/* Right Side Actions */}
                 <div className="flex items-center gap-4">
                     <a
-                        href="https://wa.me/1234567890"
+                        href="https://wa.me/5555558800"
                         target="_blank"
                         rel="noopener noreferrer"
                         className={styles.ctaButton}

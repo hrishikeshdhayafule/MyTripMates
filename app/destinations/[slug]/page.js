@@ -143,7 +143,7 @@ export default async function DestinationPage({ params }) {
 
                         <div className="mt-8">
                             <a
-                                href="https://wa.me/1234567890"
+                                href="https://wa.me/5555558800"
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className={styles.inquireButton}
