@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { MessageCircle } from "lucide-react";
 import styles from "./page.module.css";
 
 export default function CantonFairPage() {
