@@ -1,0 +1,160 @@
+.page {
+    min-height: 100vh;
+    background-color: #020617;
+    /* slate-950 */
+    color: white;
+}
+
+.hero {
+    position: relative;
+    height: 50vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.heroBg {
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at center, #1e293b, #020617, #000000);
+    z-index: 0;
+}
+
+.heroContent {
+    position: relative;
+    z-index: 10;
+    text-align: center;
+    padding: 0 1rem;
+}
+
+.label {
+    color: #eab308;
+    /* yellow-500 */
+    font-family: monospace;
+    letter-spacing: 0.1em;
+    font-size: 0.875rem;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+    display: block;
+}
+
+.title {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    letter-spacing: -0.02em;
+}
+
+.subtitle {
+    font-size: 1.25rem;
+    color: #94a3b8;
+    /* slate-400 */
+    max-width: 42rem;
+    margin: 0 auto;
+}
+
+.buttonContainer {
+    margin-top: 2rem;
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+}
+
+.ctaButton {
+    background-color: white;
+    color: #020617;
+    padding: 0.75rem 2rem;
+    border-radius: 9999px;
+    font-weight: 500;
+    transition: background-color 0.3s;
+}
+
+.ctaButton:hover {
+    background-color: #e2e8f0;
+    /* slate-200 */
+}
+
+.gridPattern {
+    position: absolute;
+    inset: 0;
+    background-image: url('https://grainy-gradients.vercel.app/noise.svg');
+    opacity: 0.2;
+    mix-blend-mode: overlay;
+    pointer-events: none;
+}
+
+.container {
+    max-width: var(--spacing-container);
+    margin: 0 auto;
+    padding: 5rem 1rem;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 3rem;
+}
+
+@media (min-width: 768px) {
+    .title {
+        font-size: 4.5rem;
+    }
+
+    .grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+.card {
+    background-color: rgba(15, 23, 42, 0.5);
+    /* slate-900/50 */
+    padding: 2rem;
+    border-radius: 1rem;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    transition: border-color 0.3s;
+}
+
+.card:hover {
+    border-color: rgba(234, 179, 8, 0.5);
+    /* yellow-500/50 */
+}
+
+.cardTitle {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: #e2e8f0;
+    /* slate-200 */
+    transition: color 0.3s;
+}
+
+.card:hover .cardTitle {
+    color: #eab308;
+}
+
+.cardText {
+    color: #94a3b8;
+    /* slate-400 */
+    line-height: 1.625;
+}
+
+.footerNav {
+    margin-top: 5rem;
+    padding-top: 3rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #64748b;
+    /* slate-500 */
+}
+
+.backLink {
+    transition: color 0.3s;
+}
+
+.backLink:hover {
+    color: white;
+}

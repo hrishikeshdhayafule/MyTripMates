@@ -1,0 +1,56 @@
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 50;
+    padding: 1.5rem 0;
+    transition: all 0.3s ease;
+    background: transparent;
+}
+
+.scrolled {
+    background: rgba(253, 251, 247, 0.8);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    padding: 1rem 0;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    font-family: var(--font-serif);
+    font-size: 1.75rem;
+    font-weight: 700;
+    color: var(--marketing-orange);
+    letter-spacing: -0.02em;
+}
+
+.ctaButton {
+    background-color: var(--marketing-orange);
+    color: white;
+    padding: 0.6rem 1.25rem;
+    border-radius: 9999px;
+    font-weight: 500;
+    font-size: 0.95rem;
+    transition: all 0.3s;
+    box-shadow: 0 4px 6px -1px rgba(217, 119, 87, 0.2);
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.ctaButton:hover {
+    background-color: #c06042;
+    transform: translateY(-1px);
+}
+
+.menuButton {
+    display: none;
+    /* Hidden for now, simplified version */
+}

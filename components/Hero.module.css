@@ -1,0 +1,205 @@
+.hero {
+    position: relative;
+    min-height: 100vh;
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 5rem;
+    /* Space for fixed navbar */
+}
+
+.bgLayer {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    overflow: hidden;
+}
+
+.glowLayer {
+    position: absolute;
+    inset: 0;
+    /* Subtle white gradient to ensure text readability over hero image */
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.6) 40%, rgba(255, 255, 255, 0.95));
+    z-index: 1;
+}
+
+.badge {
+    display: inline-block;
+    padding: 0.5rem 1.5rem;
+    background-color: rgba(197, 160, 89, 0.1);
+    /* Gold tint */
+    color: #9A7B4F;
+    /* Darker Gold text */
+    border-radius: 9999px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    margin-bottom: 2rem;
+    border: 1px solid rgba(197, 160, 89, 0.3);
+}
+
+.content {
+    position: relative;
+    z-index: 10;
+    text-align: center;
+    padding: 0 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.heading {
+    font-family: var(--font-serif);
+    font-size: 3.5rem;
+    font-weight: 600;
+    /* Playfair Display looks good at 600 */
+    line-height: 1.1;
+    letter-spacing: -0.01em;
+    margin-bottom: 2rem;
+    color: #0F172A;
+    /* Explicit Slate-900 for high contrast */
+}
+
+@media (min-width: 768px) {
+    .heading {
+        font-size: 5.5rem;
+    }
+}
+
+.accent {
+    color: var(--marketing-orange);
+    font-style: italic;
+    /* Playfair Italic is nice */
+}
+
+.subtext {
+    font-size: 1.25rem;
+    color: #57534e;
+    /* Stone-600 */
+    margin-bottom: 3rem;
+    max-width: 42rem;
+    line-height: 1.6;
+}
+
+.actions {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    margin-bottom: 5rem;
+}
+
+.ctaButton {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 1rem 2.5rem;
+    background-color: var(--marketing-orange);
+    color: white;
+    border-radius: 9999px;
+    font-weight: 500;
+    font-size: 1.125rem;
+    transition: all 0.3s;
+    box-shadow: 0 10px 15px -3px rgba(217, 119, 87, 0.25);
+}
+
+.ctaButton:hover {
+    background-color: #c06042;
+    transform: translateY(-2px);
+    box-shadow: 0 20px 25px -5px rgba(217, 119, 87, 0.3);
+}
+
+.secondaryLink {
+    color: var(--marketing-dark);
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: opacity 0.3s;
+}
+
+.secondaryLink:hover {
+    opacity: 0.7;
+}
+
+/* Stats Row */
+.statsContainer {
+    display: flex;
+    gap: 4rem;
+    padding-top: 2rem;
+    border-top: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.statItem {
+    text-align: center;
+}
+
+.statValue {
+    display: block;
+    font-family: var(--font-serif);
+    font-size: 2rem;
+    font-weight: 600;
+    color: var(--marketing-dark);
+    line-height: 1;
+    margin-bottom: 0.25rem;
+}
+
+.statLabel {
+    font-size: 0.875rem;
+    color: #78716c;
+    /* Stone-500 */
+}
+
+.textureOverlay {
+    position: absolute;
+    inset: 0;
+    z-index: 20;
+    pointer-events: none;
+    opacity: 0.4;
+    mix-blend-mode: multiply;
+    /* Better for light mode noise */
+}
+
+/* Floating Elements for Depth */
+.floatingElement {
+    position: absolute;
+    z-index: 2;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(8px);
+    padding: 0.5rem;
+}
+
+.float1 {
+    top: 15%;
+    left: 10%;
+    width: 180px;
+    transform: rotate(-6deg);
+    opacity: 0.6;
+}
+
+.float2 {
+    bottom: 20%;
+    right: 8%;
+    width: 220px;
+    transform: rotate(4deg);
+    opacity: 0.7;
+}
+
+@media (max-width: 1024px) {
+    .floatingElement {
+        display: none;
+        /* Hide on smaller screens to keep it clean */
+    }
+}
+
+.floatImage {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    display: block;
+}

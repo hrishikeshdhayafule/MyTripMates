@@ -1,0 +1,97 @@
+.card {
+    position: relative;
+    height: 400px;
+    width: 100%;
+    border-radius: 1rem;
+    overflow: hidden;
+    /* Solid clean card for "Premium" feel */
+    background: #ffffff;
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    display: block;
+    /* Link is inline by default */
+    box-shadow: 0 4px 20px -2px rgba(0, 0, 0, 0.05);
+    /* Soft premium shadow */
+}
+
+.card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px -5px rgba(0, 0, 0, 0.1);
+    border-color: var(--marketing-orange);
+    /* Gold border on hover */
+}
+
+
+
+.imageWrapper {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+}
+
+.image {
+    object-fit: cover;
+    transition: transform 0.7s;
+    opacity: 0.8;
+}
+
+.card:hover .image {
+    transform: scale(1.1);
+    opacity: 1;
+}
+
+.gradientOverlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.2), transparent);
+}
+
+.content {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 1.5rem;
+    z-index: 10;
+    transform: translateY(0.5rem);
+    transition: transform 0.5s;
+}
+
+.card:hover .content {
+    transform: translateY(0);
+}
+
+.title {
+    font-size: 1.875rem;
+    font-weight: 700;
+    color: white;
+    margin-bottom: 0.5rem;
+    letter-spacing: -0.02em;
+}
+
+.underline {
+    height: 2px;
+    width: 3rem;
+    background-color: var(--marketing-orange);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.5s;
+}
+
+.card:hover .underline {
+    transform: scaleX(1);
+}
+
+.cta {
+    font-size: 0.875rem;
+    color: #d1d5db;
+    /* gray-300 */
+    margin-top: 0.5rem;
+    opacity: 0;
+    transition: opacity 0.5s;
+    transition-delay: 0.1s;
+}
+
+.card:hover .cta {
+    opacity: 1;
+}

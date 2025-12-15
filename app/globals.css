@@ -1,12 +1,37 @@
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* Brand Palette - Professional Luxury */
+  --marketing-orange: #C5A059;
+  /* Muted Gold/Bronze instead of Orange */
+  --marketing-dark: #0F172A;
+  /* Deep Navy/Charcoal */
+  --marketing-light: #FFFFFF;
+  /* Crisp White */
+  --marketing-glass: rgba(255, 255, 255, 0.7);
+  --marketing-glass-border: rgba(15, 23, 42, 0.05);
+  --marketing-blur: 16px;
+
+  /* Typography */
+  --font-heading: var(--font-serif);
+  --font-body: var(--font-geist-sans);
+
+  /* Spacing */
+  --spacing-container: 1200px;
+  --spacing-xs: 0.5rem;
+  --spacing-sm: 1rem;
+  --spacing-md: 2rem;
+  --spacing-lg: 4rem;
+  --spacing-xl: 8rem;
+
+  /* Animation */
+  --ease-slow: cubic-bezier(0.65, 0, 0.35, 1);
 }
 
 @media (prefers-color-scheme: dark) {
+
+  /* Enforce Light/Clean theme as default */
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background: var(--marketing-light);
+    --foreground: var(--marketing-dark);
   }
 }
 
@@ -14,14 +39,11 @@ html,
 body {
   max-width: 100vw;
   overflow-x: hidden;
-}
-
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: var(--marketing-light);
+  color: var(--marketing-dark);
+  font-family: var(--font-body);
   -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  scroll-behavior: smooth;
 }
 
 * {
@@ -30,13 +52,30 @@ body {
   margin: 0;
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
+/* Typography Utilities */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 600;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
 }
 
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
+/* Glassmorphism Utility */
+.glass-panel {
+  background: var(--marketing-glass);
+  backdrop-filter: blur(var(--marketing-blur));
+  -webkit-backdrop-filter: blur(var(--marketing-blur));
+  border: 1px solid var(--marketing-glass-border);
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+}
+
+/* Container */
+.container {
+  max-width: var(--spacing-container);
+  margin: 0 auto;
+  padding: 0 var(--spacing-md);
 }
